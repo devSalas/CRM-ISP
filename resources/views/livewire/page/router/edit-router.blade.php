@@ -5,8 +5,8 @@
         <form wire:submit="save"  class="py-6" @click.away="open = false; $dispatch('reset-form')">
             <div class="flex flex-col gap-2">
                 <x-label> Nombre</x-label>
-                <x-input wire:model="RouterCreate.name" class="w-full" placeholder="Dixon..." ></x-input>
-                <x-input-error for="RouterCreate.name"/>
+                <x-input wire:model="RouterEdit.name" class="w-full" placeholder="Dixon..." ></x-input>
+                <x-input-error for="RouterEdit.name"/>
             </div>
             <div class="flex flex-col gap-2">
                 <x-label>Descripción</x-label>

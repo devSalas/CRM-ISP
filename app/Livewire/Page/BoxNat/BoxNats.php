@@ -1,31 +1,30 @@
 <?php
 
-namespace App\Livewire\Page\User;
+namespace App\Livewire\Page\BoxNat;
 
-use App\Models\User;
+use App\Models\BoxNat;
 use Livewire\Component;
 
-class Users extends Component
+class BoxNats extends Component
 {
+
     public $id;
-    public $users;
+    public $boxNats;
     public $message;
     public $showModalDelete = false;
 
-
-
     public function openModalDelete($id)
     {
-
         $this->id = $id;
     }
+
     
     public function delete()
     {
         if ($this->id) {
-            User::find($this->id)->delete();
+            BoxNat::find($this->id)->delete();
             $this->showModalDelete = false;
-            $this->users= User::get();
+            $this->boxNats= BoxNat::get();
         } else {
             $this->message = "Ocurrio un Error";
         }
@@ -35,11 +34,12 @@ class Users extends Component
 
     public function mount()
     {
-        $this->users = User::get();
+        $this->boxNats = BoxNat::get();
     }
+
 
     public function render()
     {
-        return view('livewire.page.user.users');
+        return view('livewire.page.box-nat.box-nats');
     }
 }

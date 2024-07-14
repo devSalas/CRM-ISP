@@ -2,7 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\BoxNat;
 use App\Models\User;
+use App\Models\Worker;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -20,10 +22,13 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
         ]); */
         $this->call([
-            RouterSeeder::class,
-            /* RoleSeeder::class,
-            UserSeeder::class */
-            
+        /*     RoleSeeder::class,
+            UserSeeder::class,
+            WorkerSeeder::class,
+            ClientSeeder::class, 
+            BoxNatSeeder::class
+            ServiceSeeder::class,*/
+            InstallationSeeder::class
         ]);
 
 

@@ -18,7 +18,7 @@
     <!-- Styles -->
     @livewireStyles
     <style>
-        * {
+        *{
             box-sizing: border-box;
             margin: 0px;
             padding: 0px;
@@ -28,10 +28,10 @@
 
 
 
-<body class="font-sans antialiased    ">
-    {{--  <x-banner /> --}}
+<body class="font-sans antialiased bg-primary">
+    <x-banner />
 
-    <div class="min-h-screen   flex flex-col">
+    <div class="min-h-screen  overflow-hidden bg-gray-100">
         @livewire('navigation-menu')
 
         <!-- Page Heading -->
@@ -44,12 +44,8 @@
         @endif
 
         <!-- Page Content -->
-        <main class="w-screen grow h-[container-dinamico]  overflow-hidden  flex    xl:px-0   ">
-            <x-navbar />
-
+        <main class="w-screen  flex  p-6  xl:px-0 max-w-7xl m-auto ">
             {{ $slot }}
-
-
         </main>
 
     </div>

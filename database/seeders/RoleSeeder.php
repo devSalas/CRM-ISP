@@ -25,7 +25,7 @@ class RoleSeeder extends Seeder
         Role::create([
             "id" =>3,
             "name"=>"cliente"
-        ]);
+        ]); 
 
         DB::table("role_user")->insert([
             'role_id'=>1,
@@ -36,10 +36,25 @@ class RoleSeeder extends Seeder
             'user_id'=>2
         ]);
         DB::table("role_user")->insert([
-            'role_id'=>3,
+            'role_id'=>2,
             'user_id'=>3
         ]);
-
+        DB::table("role_user")->insert([
+            'role_id'=>3,
+            'user_id'=>4
+        ]);
+        DB::table("role_user")->insert([
+            'role_id'=>3,
+            'user_id'=>5
+        ]);
+        DB::table("role_user")->insert([
+            'role_id'=>2,
+            'user_id'=>4
+        ]);
+        DB::table("role_user")->insert([
+            'role_id'=>1,
+            'user_id'=>4
+        ]);
 
 
     }

@@ -10,45 +10,59 @@ use Livewire\Component;
 class EditRouter extends Component
 {
 
-        public RouterEditForm $RouterCreate;
+    public RouterEditForm $RouterEdit;
+    public $router;
+    public $name;
 
-    #[On('reset-form')] 
+    #[On('reset-form')]
     public function refreshPost()
     {
-        $this->RouterCreate->resetValidation();
+        /* $this->RouterCreate->resetValidation(); */
     }
 
-    #[On('edit-router')] 
+    #[On('edit-router')]
     public function findRouter($id)
-    {   
-        dd($id);
-     /*    $router = Router::find($id);
-        $this->RouterCreate->name = $router->name;
-       $this->RouterCreate->description = $router->description; */
+    {
+
+        $this->router = Router::find($id);
+        $this->router = Router::find($id)->first();
+
+        if ($this->router) {
+            /* $this->RouterEdit->name = $this->router->name; */
+            $this->RouterEdit->description= $this->router->description;
+            $this->RouterEdit->model = $this->router->model;
+            $this->RouterEdit->ports = $this->router->ports;
+            
+        } else {
+        
+        }
     }
 
+    public function update(){
+        dd("entro");
+    }
+
+    
 
 
 
     public function save()
     {
-        $this->RouterCreate->validate();
+        /* $this->RouterCreate->validate();
 
         
         $router = Router::create(
-            $this->RouterCreate->only('name','description','model','ports')
+            $this->RouterEdit->only('name','description','model','ports')
         );
 
         $this->dispatch("routerCreated");
         $this->RouterCreate->reset();
-
-
-        
+ */
     }
-    
+
     public function render()
     {
-        
+
 
         return view('livewire.page.router.edit-router');
     }

@@ -21,12 +21,11 @@ class Routers extends Component
         $this->routers= Router::get();
     }
 
-    #[On('routerEdit')]
     public function routerEdit($id)
     {
       $this->openEditModal = true;
-      $this->dispatch("edit-router",['id'=>$id]);
-    }
+      $this->dispatch('edit-router', ["id"=>$id]);
+    } 
 
 
     

@@ -53,5 +53,31 @@ class UserSeeder extends Seeder
             "zone"=>"los rosales",
             "district"=>"San borja"
         ]);
+        User::create([
+            "name"=>"alejandro salas",
+            "email"=>"alejandro@gmail.com",
+            "password"=>Hash::make("12345678"),
+            "phone"=>"927859435",
+            "gender"=>"masculino",
+            "age"=>"20",
+            "address"=>"Mz A lt 35",
+            "DNI"=>"74702826",
+            "CE"=>"22222222",
+            "zone"=>"los rosales",
+            "district"=>"San borja"
+        ]);
+        User::create([
+            "name"=>"martin salas",
+            "email"=>"martin@gmail.com",
+            "password"=>Hash::make("12345678"),
+            "phone"=>"927859435",
+            "gender"=>"masculino",
+            "age"=>"20",
+            "address"=>"Mz A lt 35",
+            "DNI"=>"74702826",
+            "CE"=>"22222222",
+            "zone"=>"los rosales",
+            "district"=>"San borja"
+        ]);
     }
 }

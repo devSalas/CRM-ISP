@@ -1,14 +1,15 @@
 <?php
 
-namespace App\Livewire\Page\User;
+namespace App\Livewire\Service;
 
-use App\Models\User;
+use App\Models\Service;
 use Livewire\Component;
 
-class Users extends Component
+class Services extends Component
 {
+
     public $id;
-    public $users;
+    public $services;
     public $message;
     public $showModalDelete = false;
 
@@ -23,9 +24,9 @@ class Users extends Component
     public function delete()
     {
         if ($this->id) {
-            User::find($this->id)->delete();
+            Service::find($this->id)->delete();
             $this->showModalDelete = false;
-            $this->users= User::get();
+            $this->services= Service::get();
         } else {
             $this->message = "Ocurrio un Error";
         }
@@ -35,11 +36,11 @@ class Users extends Component
 
     public function mount()
     {
-        $this->users = User::get();
+        $this->services = Service::get();
     }
 
     public function render()
     {
-        return view('livewire.page.user.users');
+        return view('livewire.service.services');
     }
 }

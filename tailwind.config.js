@@ -24,7 +24,10 @@ export default {
                 "txtprimary":"#00000",
                 "txtsecondary":"#FFFFFF",
                 "txtthird":"#879595",
-            }   
+            },
+            height:{
+                "container-dinamico":"calc(100vh - 65px)"
+            }
         },
     },
 
