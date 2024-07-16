@@ -1,5 +1,5 @@
 <div x-data="{ showModalDelete: @entangle('showModalDelete') }"
-class="w-full overflow-hidden  gap-8   p-8">
+class="  gap-8   p-8">
 
     <h1 class="mb-8 text-4xl">Usuarios</h1>
     <div class="mb-8">
@@ -8,7 +8,6 @@ class="w-full overflow-hidden  gap-8   p-8">
             Crear Usuario
         </a>
     </div>
-   <div x-text="showModalDelete"></div>
     {{-- este  --}}
     <div class="w-full overflow-auto relative">
 
@@ -64,7 +63,7 @@ class="w-full overflow-hidden  gap-8   p-8">
             </tbody>
         </table>
 
-
+{{-- 
         <div x-show="showModalDelete"  @click.away="showModalDelete=false">
             hola
             <x-modal id={{$id}}>
@@ -79,7 +78,7 @@ class="w-full overflow-hidden  gap-8   p-8">
                     @endif
                 </div>
             </x-modal>
-        </div>
+        </div> --}}
 
 
     </div>

@@ -26,8 +26,12 @@ export default {
                 "txtthird":"#879595",
             },
             height:{
-                "container-dinamico":"calc(100vh - 65px)"
-            }
+              'main':'calc(100vh - 60px)'
+            },
+            spacing: {
+                'calc-screen': 'calc(100vh - 60px)', // Ejemplo de uso
+              },
+
         },
     },
 

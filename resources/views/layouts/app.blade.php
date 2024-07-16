@@ -28,30 +28,21 @@
 
 
 
-<body class="font-sans antialiased    ">
+<body class="font-sans antialiased relative ">
     {{--  <x-banner /> --}}
 
-    <div class="min-h-screen   flex flex-col">
-        @livewire('navigation-menu')
-
-        <!-- Page Heading -->
-        @if (isset($header))
-            <header class="bg-white shadow">
-                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                    {{ $header }}
-                </div>
-            </header>
-        @endif
-
-        <!-- Page Content -->
-        <main class="w-screen grow h-[container-dinamico]  overflow-hidden  flex    xl:px-0   ">
-            <x-navbar />
-
-            {{ $slot }}
-
-
-        </main>
-
+    <div class="flex flex-col h-screen w-screen overflow-hidden ">
+            @livewire('navigation-menu')
+     
+        <div class="flex flex-row   h-calc-screen ">
+            <div class="">
+                <x-navbar />
+            </div>
+            <div class="w-full  p-4 overflow-y-auto overflow-x-hidden">
+             {{$slot}}
+            
+            </div>
+        </div>
     </div>
 
     @stack('modals')

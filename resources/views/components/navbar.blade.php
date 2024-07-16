@@ -12,6 +12,11 @@
             'path' => 'users',
             'title' => 'Usuarios',
         ],
+        'workers' => [
+            'img' => 'img/icon/users-icon.svg',
+            'path' => 'workers',
+            'title' => 'Trabajadores',
+        ],
         'routers' => [
             'img' => 'img/icon/router-icon.svg',
             'path' => 'routers',
@@ -29,19 +34,25 @@
             'path' => 'services',
             'title' => 'Servicios',
         ],
-        
-
+        'Instalaciones' => [
+            'img' => 'img/icon/installer-icon.svg',
+            'path' => 'installations',
+            'title' => 'Instalaciones',
+        ],
     ];
 @endphp
 
-<div x-data={large:false} :class="large ? 'w-48' : 'w-auto'"
-    class="relative  max-w-48  bg-secondary border-2 border-secondary transition-all duration-100 ease-linear">
 
+
+<div x-data={large:false} :class="large ? 'w-48' : 'w-auto'"
+    class="relative max-w-48 bg-secondary border-2 border-secondary transition-all duration-100 ease-linear">
+
+    {{-- BOTON PARA ABRIR O CERRAR EL NAVBAR --}}
     <div @click="large=!large" class="absolute top-2 right-2 text-txtsecondary text-2xl">
-        >
+        <img src="{{asset('./img/icon/arrow-icon.svg')}}" alt="">
     </div>
 
-    <div class="flex flex-col gap-8 pt-8 justify-start rounded-r-2xl h-full  text-white">
+    <div class="flex flex-col gap-8 pt-8 justify-start rounded-r-2xl h-screen  text-white">
 
         @foreach ($items as $item)
             <a href="{{ route($item['path']) }}"

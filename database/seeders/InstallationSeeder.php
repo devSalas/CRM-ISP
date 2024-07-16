@@ -13,25 +13,15 @@ class InstallationSeeder extends Seeder
      */
     public function run(): void
     {
-        /*  $table->id();
-            $table->string("name");
-            $table->string("phone");
-            $table->string("email")->unique();
-            $table->unsignedBigInteger("service");
-            $table->unsignedInteger("worker");
-            $table->date("installer_date");
-            $table->time("hour");
-            $table->string("observation");
-            $table->string("code")->unique();
-            $table->timestamps(); */
 
          Installation::create([
             'name'=>"enrique roman de la cruz",
             "phone" =>"927859435",
             "email" => "enrique@gmail.com",
-            "service"=>1,
-            "worker"=>1,
-            "installer_date"=>'2024-07-13',
+            "address"=>"San Juan de Miraflores",
+            "service_id"=>1,
+            "worker_id"=>1,
+            "installation_date"=>'2024-07-13',
             "hour"=>'11:51:00',
             "observation" => 'No hay observación',
             "code"=>"1920"
@@ -40,9 +30,10 @@ class InstallationSeeder extends Seeder
             'name'=>"pablo perez",
             "phone" =>"927859435",
             "email" => "pablo@gmail.com",
-            "service"=>2,
-            "worker"=>2,
-            "installer_date"=>'2024-07-13',
+            "address"=>"villa maria del triunfo",
+            "service_id"=>2,
+            "worker_id"=>2,
+            "installation_date"=>'2024-07-13',
             "hour"=>'11:51:00',
             "observation" => 'No hay observación',
             "code"=>"1921"

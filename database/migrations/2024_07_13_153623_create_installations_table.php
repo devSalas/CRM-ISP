@@ -16,9 +16,10 @@ return new class extends Migration
             $table->string("name");
             $table->string("phone");
             $table->string("email")->unique();
-            $table->unsignedBigInteger("service");
-            $table->unsignedInteger("worker");
-            $table->date("installer_date");
+            $table->string("address");
+            $table->unsignedBigInteger("service_id");
+            $table->unsignedInteger("worker_id");
+            $table->date("installation_date");
             $table->time("hour");
             $table->string("observation");
             $table->string("code")->unique();

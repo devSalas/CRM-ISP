@@ -3,13 +3,19 @@
 use App\Livewire\Page\BoxNat\BoxNatCreate;
 use App\Livewire\Page\BoxNat\BoxNatEdit;
 use App\Livewire\Page\BoxNat\BoxNats;
+use App\Livewire\Page\Client\Clients;
 use App\Livewire\Page\Dashboard;
+use App\Livewire\Page\Installation\InstallationCreate;
+use App\Livewire\Page\Installation\InstallationEdit;
 use App\Livewire\Page\Installation\Installations;
 use App\Livewire\Page\Router\Routers;
 use App\Livewire\Page\User\UserCreate;
 use App\Livewire\Page\User\UserEdit;
 use App\Livewire\Page\User\UserId;
 use App\Livewire\Page\User\Users;
+use App\Livewire\Page\Worker\WorkerCreate;
+use App\Livewire\Page\Worker\WorkerEdit;
+use App\Livewire\Page\Worker\Workers;
 use App\Livewire\Service\ServiceCreate;
 use App\Livewire\Service\ServiceEdit;
 use App\Livewire\Service\Services;
@@ -44,6 +50,16 @@ Route::middleware([
     Route::get('/services/edit/{id}',ServiceEdit::class)->name("edit-service");
     
     Route::get('/installations',Installations::class)->name("installations");
+    Route::get('/installations/create',InstallationCreate::class)->name("create-installation");
+    Route::get('/installations/edit/{id}',InstallationEdit::class)->name("edit-installation");
 
+    Route::get('/workers',Workers::class)->name("workers");
+    Route::get('/workers/create',WorkerCreate::class)->name("create-worker");
+    Route::get('/workers/edit/{id}',WorkerEdit::class)->name("edit-worker");
+    
+    Route::get('/clients',Workers::class)->name("workers");
+    /*     Route::get('/clients/create',Create::class)->name("create-worker");
+    Route::get('/clients/edit/{id}',WorkerEdit::class)->name("edit-worker"); */
+    Route::get('/clients',Clients::class)->name("clients");
 
 });
