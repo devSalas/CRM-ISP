@@ -1,6 +1,6 @@
 <div x-data="{ showModalDelete: @entangle('showModalDelete') }" class="  gap-8   p-8">
 
-    <h1 class="mb-8 text-4xl">Instalaciones</h1>
+    <h1 class="mb-8 text-4xl">Trabajadores</h1>
     <div class="mb-8">
         <a href="{{ route('create-worker') }}" class="block">
             <x-button class="bg-secondary py-4 px-4 border-[0.5px] border-third text-txtsecondary  rounded-md">Crear
