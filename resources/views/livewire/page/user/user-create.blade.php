@@ -2,7 +2,7 @@
     <h2 class="text-4xl mb-8">Crear Usuarios</h2>
     <form wire:submit="save" class="grid grid-cols-3   gap-4 w-full ">
 
-        <fieldset class="col-span-3">
+        {{-- <fieldset class="col-span-3">
             <h2>Tipo de usuario</h2>
             <legend class="sr-only">Tipo de usuario</legend>
             
@@ -10,7 +10,7 @@
                 <label for="Option1" class="flex cursor-pointer items-start gap-4 py-4">
                     <div class="flex items-center">
                         &#8203;
-                        <input type="checkbox" class="size-4 rounded border-gray-300" id="Option1" />
+                        <input type="checkbox" wire:model="UserCreate.roles" value="client" class="size-4 rounded border-gray-300" id="Option1" />
                     </div>
 
                     <div>
@@ -25,7 +25,7 @@
                 <label for="Option2" class="flex cursor-pointer items-start gap-4 py-4">
                     <div class="flex items-center">
                         &#8203;
-                        <input type="checkbox" class="size-4 rounded border-gray-300" id="Option2" />
+                        <input type="checkbox" wire:model="UserCreate.roles"  value="worker" class="size-4 rounded border-gray-300" id="Option2" />
                     </div>
 
                     <div>
@@ -40,7 +40,7 @@
                 <label for="Option3" class="flex cursor-pointer items-start gap-4 py-4">
                     <div class="flex items-center">
                         &#8203;
-                        <input type="checkbox" class="size-4 rounded border-gray-300" id="Option3" />
+                        <input type="checkbox" wire:model="UserCreate.roles"  value="admin" class="size-4 rounded border-gray-300" id="Option3" />
                     </div>
 
                     <div>
@@ -51,7 +51,7 @@
                     </div>
                 </label>
             </div>
-        </fieldset>
+        </fieldset> --}}
 
 
         <x-label>
@@ -128,12 +128,6 @@
             </a>
             <x-button>Crear </x-button>
         </div>
-        <!--
-  Heads up! 👋
-
-  Plugins:
-    - @tailwindcss/forms
--->
 
         
     </form>

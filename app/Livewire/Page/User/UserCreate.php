@@ -11,16 +11,23 @@ class UserCreate extends Component
 {
 
     public UserCreateForm $UserCreate;
-    
+    public $user;
+
+
     public function save()
     {
+
         $this->UserCreate->validate();
-          $user = User::create(
-            $this->UserCreate->only(['name','password','email','phone','gender','age','address','DNI','CE','zone','district'])
-        );
+       
+
+        $this->user = User::create(
+          $this->UserCreate->only(['name','password','email','phone','gender','age','address','DNI','CE','zone','district'])
+      );
+
         $this->UserCreate->reset();
         $this->redirect("/users");
     }
+    
     public function render()
     {
         return view('livewire.page.user.user-create');

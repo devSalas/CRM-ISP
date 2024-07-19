@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Worker extends Model
 {
@@ -22,6 +23,12 @@ class Worker extends Model
     public function installation():HasMany
     {
         return $this->hasMany(Installation::class);
+    }
+
+
+    public function contract():HasMany
+    {
+        return $this->hasMany(Contract::class);
     }
 
 }

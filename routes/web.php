@@ -4,6 +4,7 @@ use App\Livewire\Page\BoxNat\BoxNatCreate;
 use App\Livewire\Page\BoxNat\BoxNatEdit;
 use App\Livewire\Page\BoxNat\BoxNats;
 use App\Livewire\Page\Client\Clients;
+use App\Livewire\Page\Contract\Contracts;
 use App\Livewire\Page\Dashboard;
 use App\Livewire\Page\Installation\InstallationCreate;
 use App\Livewire\Page\Installation\InstallationEdit;
@@ -57,9 +58,11 @@ Route::middleware([
     Route::get('/workers/create',WorkerCreate::class)->name("create-worker");
     Route::get('/workers/edit/{id}',WorkerEdit::class)->name("edit-worker");
     
-    Route::get('/clients',Workers::class)->name("workers");
+    Route::get('/workers',Workers::class)->name("workers");
     /*     Route::get('/clients/create',Create::class)->name("create-worker");
     Route::get('/clients/edit/{id}',WorkerEdit::class)->name("edit-worker"); */
     Route::get('/clients',Clients::class)->name("clients");
+
+    Route::get('/contracts',Contracts::class)->name("contracts");
 
 });

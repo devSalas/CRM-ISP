@@ -27,8 +27,12 @@ class DatabaseSeeder extends Seeder
             WorkerSeeder::class,
             ClientSeeder::class, 
             BoxNatSeeder::class,
+            RouterSeeder::class,
             ServiceSeeder::class,
-            InstallationSeeder::class
+            InstallationSeeder::class,
+            PaymentCommitmentSeeder::class,
+            ContractSeeder::class,
+            
         ]);
 
 

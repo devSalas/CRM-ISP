@@ -33,15 +33,15 @@
 
     <div class="flex flex-col h-screen w-screen overflow-hidden ">
             @livewire('navigation-menu')
-     
-        <div class="flex flex-row   h-calc-screen ">
-            <div class="">
+        <div class="flex flex-row   h-calc-screen  w-full overflow-hidden">
+            <div class=" h-full bg-green-300">
                 <x-navbar />
             </div>
-            <div class="w-full  p-4 overflow-y-auto overflow-x-hidden">
+            
+            <div class="w-full grow  p-4 overflow-y-auto overflow-x-hidden">
              {{$slot}}
             
-            </div>
+            </div> 
         </div>
     </div>
 

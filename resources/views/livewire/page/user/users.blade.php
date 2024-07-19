@@ -9,9 +9,9 @@ class="  gap-8   p-8">
         </a>
     </div>
     {{-- este  --}}
-    <div class="w-full overflow-auto relative">
+    <div class="w-full overflow-auto relative  rounded-lg">
 
-        <table class="table-auto  border-collapse  min-w-full   ">
+        <table class="table-auto  border-collapse  min-w-full  bg-blue-200 r ">
             <thead class="pb-8 border-b-[1px] border-slate-800 ">
                 <tr class="text-start ">
                     <th class="text-start p-2">Nombre</th>
@@ -24,7 +24,7 @@ class="  gap-8   p-8">
                     <th class="text-start p-2">CE</th>
                     <th class="text-start p-2">Zona</th>
                     <th class="text-start p-2">Distrito</th>
-                    <th class="sticky  right-0 text-start p-2  left-0 top-0    ">Acciones</th>
+                    <th class="sticky  right-0 text-start p-2  left-0 top-0   bg-blue-300 ">Acciones</th>
 
                 </tr>
             </thead>
@@ -41,29 +41,30 @@ class="  gap-8   p-8">
                         <td class="p-3 min-w-32">{{ $user->CE }}</td>
                         <td class="p-3 min-w-32">{{ $user->zone }}</td>
                         <td class="p-3 min-w-32">{{ $user->district }}</td>
-                        <td class="sticky  bg-primary text-start  inset-0 h-full w-full">
-                            <span class=" w-full h-full  flex justify-center items-center gap-2">
-                                <button @click="showModalDelete=true;id={{ $user->id }}"
+                        <td class="sticky  bg-blue-300 text-start  inset-0 h-full w-full p-2">
+                            <div class="w-full h-full  flex gap-2">
+                                <button 
+                                    class=" rounded-full bg-secondary/20 p-2 w-8 h-8 "
                                     wire:click="openModalDelete({{ $user->id }})"
-                                    class="rounded-full bg-secondary/20 p-2">
-                                    <img src="{{ asset('img/icon/trash-icon.svg') }}" class="w-4 h-4" alt="">
+                                    @click="showModalDelete=true;id={{ $user->id }}">
+                                    <img src="{{ asset('img/icon/trash-icon.svg') }}" class="w-full h-full" alt="">
                                 </button>
-                                <a href="{{ route('edit-user',[ 'id'=>$user->id]) }}"  class="inline-block rounded-full bg-secondary/20 p-2">
-                                    <img src="{{ asset('img/icon/edit-icon.svg') }}" class="w-4 h-4" alt="">
+                                <a href="{{ route('edit-user',[ 'id'=>$user->id]) }}"  class="block w-8 h-8  rounded-full bg-secondary/20 p-2">
+                                    <img src="{{ asset('img/icon/edit-icon.svg') }}" class="w-full h-full" alt="">
                                 </a>
-                                <a href="{{ route('users-id',[ 'id'=>$user->id]) }}"  class="inline-block rounded-full bg-secondary/20 p-2">
-                                    <img src="{{ asset('img/icon/edit-icon.svg') }}" class="w-4 h-4" alt="">
-                                </a>
-                            </span>
-                        </td>
+                              {{--   <a href="{{ route('users-id',[ 'id'=>$user->id]) }}"  class="block w-8 h-8  rounded-full bg-secondary/20 p-2">
+                                    <img src="{{ asset('img/icon/edit-icon.svg') }}" class="w-full h-full" alt="">
+                                </a> --}}
+                            </div>
 
+                        </td>
                     </tr>
                 @endforeach
 
             </tbody>
         </table>
 
-{{-- 
+
         <div x-show="showModalDelete"  @click.away="showModalDelete=false">
             hola
             <x-modal id={{$id}}>
@@ -78,7 +79,7 @@ class="  gap-8   p-8">
                     @endif
                 </div>
             </x-modal>
-        </div> --}}
+        </div>
 
 
     </div>

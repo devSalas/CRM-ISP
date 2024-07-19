@@ -19,12 +19,12 @@ class PaymentCommitmentSeeder extends Seeder
             "end_date" =>10
         ]);
         PaymentCommitment::create([
-            "id"=>1,
+            "id"=>2,
             "start_date"=>11,
             "end_date" =>20
         ]);
         PaymentCommitment::create([
-            "id"=>1,
+            "id"=>3,
             "start_date"=>21,
             "end_date" =>30
         ]);
