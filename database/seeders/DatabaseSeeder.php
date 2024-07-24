@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\BoxNat;
+use App\Models\ClientIssues;
 use App\Models\User;
 use App\Models\Worker;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -32,6 +33,7 @@ class DatabaseSeeder extends Seeder
             InstallationSeeder::class,
             PaymentCommitmentSeeder::class,
             ContractSeeder::class,
+            ClientIssueSeeder::class
             
         ]);
 

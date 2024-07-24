@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Contract extends Model
 {
@@ -43,4 +44,9 @@ class Contract extends Model
         return $this->belongsTo(PaymentCommitment::class);
     }
     
+
+    public function clientIssue(): HasMany
+    {
+        return  $this->hasMany(ClientIssues::class,'code','code');
+    }
 }

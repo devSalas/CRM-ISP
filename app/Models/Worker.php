@@ -13,7 +13,7 @@ class Worker extends Model
     use HasFactory;
     
     
-
+    protected $guarded =[];
 
     public function user():BelongsTo
     {
@@ -29,6 +29,13 @@ class Worker extends Model
     public function contract():HasMany
     {
         return $this->hasMany(Contract::class);
+    }
+
+
+    
+    public function clientIssue(): HasMany
+    {
+        return  $this->hasMany(ClientIssues::class);
     }
 
 }

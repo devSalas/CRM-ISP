@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Service;
+namespace App\Livewire\Page\Service;
 
 use App\Livewire\Forms\service\ServiceCreateForm;
 use App\Models\Service;
@@ -8,6 +8,7 @@ use Livewire\Component;
 
 class ServiceCreate extends Component
 {
+
     public ServiceCreateForm $ServiceCreate;
     
     public function save()
@@ -22,6 +23,6 @@ class ServiceCreate extends Component
 
     public function render()
     {
-        return view('livewire.service.service-create');
+        return view('livewire.page.service.service-create');
     }
 }

@@ -1,13 +1,12 @@
 <?php
 
-namespace App\Livewire\Service;
+namespace App\Livewire\Page\Service;
 
 use App\Models\Service;
 use Livewire\Component;
 
 class Services extends Component
 {
-
     public $id;
     public $services;
     public $message;
@@ -41,6 +40,6 @@ class Services extends Component
 
     public function render()
     {
-        return view('livewire.service.services');
+        return view('livewire.page.service.services');
     }
 }

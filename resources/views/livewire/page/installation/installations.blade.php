@@ -1,12 +1,7 @@
-<div x-data="{ showModalDelete: @entangle('showModalDelete') }" class="  gap-8   p-8">
+<div x-data="{ showModalDelete: @entangle('showModalDelete') }" class="mb-16">
 
     <h1 class="mb-8 text-4xl">Instalaciones</h1>
-    <div class="mb-8">
-        <a href="{{ route('create-installation') }}" class="">
-            <x-button class="bg-secondary py-4 px-4 border-[0.5px] border-third text-txtsecondary  rounded-md">Crear
-                Instalación</x-button>
-        </a>
-    </div>
+
     <div class="flex justify-between w-full">
         <div >
             <label for="filterDate">Filtrar por fecha:</label>

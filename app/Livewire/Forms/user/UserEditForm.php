@@ -8,6 +8,10 @@ use Livewire\Form;
 
 class UserEditForm extends Form
 {
+
+    #[Rule('required')]
+    public $roles=[];
+    
     #[Rule('required')]
     public $name;
 

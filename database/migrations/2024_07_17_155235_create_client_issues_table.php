@@ -13,7 +13,9 @@ return new class extends Migration
     {
         Schema::create('client_issues', function (Blueprint $table) {
             $table->id();
-            
+            $table->unsignedBigInteger("code");
+            $table->unsignedBigInteger("worker_id");
+            $table->string("description");
             $table->timestamps();
         });
     }

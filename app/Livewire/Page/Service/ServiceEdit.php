@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Service;
+namespace App\Livewire\Page\Service;
 
 use App\Livewire\Forms\service\ServiceCreateForm;
 use App\Models\Service;
@@ -44,9 +44,8 @@ class ServiceEdit extends Component
         $this->redirect("/services");
     }
 
-
     public function render()
     {
-        return view('livewire.service.service-edit');
+        return view('livewire.page.service.service-edit');
     }
 }

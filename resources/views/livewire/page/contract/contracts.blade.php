@@ -15,6 +15,7 @@ class="  gap-8   p-8">
             <thead class="pb-8 border-b-[1px] border-slate-800 ">
                 <tr class="text-start ">
                     <th class="text-start p-2">cliente</th>
+                    <th class="text-start p-2">N* contrato</th>
                     <th class="text-start p-2">Instalador</th>
                     <th class="text-start p-2">Es Compañia</th>
                     <th class="text-start p-2">compañia</th>
@@ -35,6 +36,7 @@ class="  gap-8   p-8">
                 @foreach ($contracts as $contract)
                 <tr class=" border-b-[1px] border-slate-600 ">
                         <td class="p-3 min-w-32">{{ $contract->client->user->name }}</td>
+                        <td class="p-3 min-w-32">{{ $contract->code }}</td>
                         <td class="p-3 min-w-32">{{ $contract->worker->user->name }}</td>
                         <td class="p-3 min-w-32">
                             {{ $contract->finish_date == 1 ? 'Sí' : 'No' }}
