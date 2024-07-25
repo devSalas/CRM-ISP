@@ -12,12 +12,12 @@ class ClientIssues extends Model
 
     protected $guarded = [];
 
-    public function contracts(): BelongsTo
+    public function contract(): BelongsTo
     {
         return  $this->belongsTo(Contract::class,'code','code');
     }
 
-    public function workers(): BelongsTo
+    public function worker(): BelongsTo
     {
         return  $this->belongsTo(Worker::class);
     }

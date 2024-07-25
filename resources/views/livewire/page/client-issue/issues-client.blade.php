@@ -8,7 +8,7 @@
     </div>
 
 
-    {{$clientIssues}}
+    {{-- {{$clientIssues}} --}}
 
     <div class="w-full  relative overflow-x-scroll">
         <table class="table-auto  border-collapse  min-w-full">
@@ -17,7 +17,6 @@
                     <th class="text-start p-2">codigo</th>
                     <th class="text-start p-2">descripción</th>
                     <th class="text-start p-2">trabajdor</th>
-                    
                     <th class="sticky  right-0 text-end p-2  left-0 top-0  bg-white  ">Acciones</th>
 
                 </tr>
@@ -25,9 +24,10 @@
             <tbody class="relative">
                 @foreach ($clientIssues as $clientIssue)
                     <tr class=" border-b-[1px] border-slate-600">
-                        <td class="p-3 min-w-32">{{ $clientIssue->contracts}}</td>
                         <td class="p-3 min-w-32">{{ $clientIssue->code }}</td>
                         <td class="p-3 min-w-32">{{ $clientIssue->description }}</td>
+                        <td class="p-3 min-w-32">{{ $clientIssue->worker->user->name}}</td>
+                        <td class="p-3 min-w-32">{{ $clientIssue->contract}}</td>
                         
 
                         <td class="sticky min-w-16 bg-white   text-start  inset-0 ">
