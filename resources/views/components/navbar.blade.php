@@ -46,8 +46,8 @@
         ],
         'Instalaciones' => [
             'img' => 'img/icon/installer-icon.svg',
-            'path' => 'installations',
-            'title' => 'Instalaciones',
+            'path' => 'activities',
+            'title' => 'Actividades',
         ],
     ];
 @endphp

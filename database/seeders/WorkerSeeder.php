@@ -2,8 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\ClientIssue;
 use App\Models\Worker;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
 use Illuminate\Database\Seeder;
 
 class WorkerSeeder extends Seeder
@@ -21,5 +22,6 @@ class WorkerSeeder extends Seeder
             "id" => 2,
             "user_id"=>3
         ]);
+    
     }
 }

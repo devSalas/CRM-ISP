@@ -31,10 +31,13 @@ class Worker extends Model
     }
 
 
-    
-    public function clientIssues(): HasMany
+    public function installationIssues():HasMany
     {
-        return $this->hasMany(ClientIssues::class);
+        return $this->hasMany(InstallationIssue::class);
     }
+
+
+
+
 
 }

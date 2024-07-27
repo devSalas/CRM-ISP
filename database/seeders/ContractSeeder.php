@@ -16,7 +16,7 @@ class ContractSeeder extends Seeder
     {
         Contract::create([
             "id"=>1,
-            "code"=>2023,
+            "code"=>"2023",
             "is_company" =>false,
             "company" =>"",
             "state" => true,
@@ -33,7 +33,7 @@ class ContractSeeder extends Seeder
         ]);
         Contract::create([
             "id"=>2,
-            "code"=>2024,
+            "code"=>"2024",
             "is_company" =>true,
             "company" =>"",
             "state" => true,

@@ -14,6 +14,6 @@
 
     @livewire('page.installation.installations')
 
-    @livewire('page.client-issue.issues-client')
+    @livewire('page.installation-issue.installation-issues')
 
 </div>

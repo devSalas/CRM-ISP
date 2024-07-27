@@ -33,7 +33,8 @@ class DatabaseSeeder extends Seeder
             InstallationSeeder::class,
             PaymentCommitmentSeeder::class,
             ContractSeeder::class,
-            ClientIssueSeeder::class
+            InstallationIssueSeeder::class
+            
             
         ]);
 
