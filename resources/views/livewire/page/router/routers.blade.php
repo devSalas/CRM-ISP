@@ -20,21 +20,20 @@
 
 
     <div>
-        <table class="table-fixed w-full border-collapse  ">
-            <thead class="pb-8 border-b-[1px] border-slate-800 ">
+        <table class="table-fixed max-w-7xl w-full border-collapse  ">
+            <thead class="pb-8  bg-slate-300 ">
                 <tr class="text-start   ">
                     <th class="text-start p-2">Nombre</th>
                     <th class="text-start p-2">Descripción</th>
                     <th class="text-start p-2">Modelo</th>
                     <th class="text-start p-2">Puertos</th>
                     <th class="text-start p-2">Acciones</th>
-
                 </tr>
             </thead>
             <tbody>
                 @foreach ($routers as $router)
 
-                    <tr class="pb-8 border-b-[1px] border-slate-600 " key="router-{{$router->id}}">
+                    <tr class="pb-8 border-b-[1px] border-slate-300 " key="router-{{$router->id}}">
                         <td class="p-3">{{ $router->name }}</td>
                         <td class="p-3">{{ $router->description }}</td>
                         <td class="p-3">{{ $router->model }}</td>

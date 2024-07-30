@@ -1,6 +1,3 @@
-<div>
-    {{-- Nothing in the world is as soft and yielding as water. --}}
-</div>
 <div class="p-8 w-full">
     <h2 class="text-4xl mb-8">Crear Servicio</h2>
     <form wire:submit="save" class="grid grid-cols-3   gap-4 w-full ">

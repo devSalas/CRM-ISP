@@ -2,7 +2,7 @@
 
     <h1 class="mb-8 text-4xl">Instalaciones</h1>
 
-    <div class="flex justify-between w-full">
+    <div class="flex justify-between w-full mb-8">
         <div >
             <label for="filterDate">Filtrar por fecha:</label>
             <input type="date" id="filterDate" wire:model.live="filterDate">
@@ -13,9 +13,9 @@
 
 
 
-    <div class="w-full  relative overflow-x-scroll">
+    <div class="w-full  relative overflow-x-auto">
         <table class="table-auto  border-collapse  min-w-full">
-            <thead class="pb-8 border-b-[1px] border-slate-800 ">
+            <thead class="pb-8 bg-slate-300 ">
                 <tr class="text-start ">
                     <th class="text-start p-2">Nombre</th>
                     <th class="text-start p-2">Correo</th>
@@ -27,13 +27,13 @@
                     <th class="text-start p-2">Trabajador</th>
                     <th class="text-start p-2">Observación</th>
                     <th class="text-start p-2">Codigo</th>
-                    <th class="sticky  right-0 text-end p-2  left-0 top-0  bg-white  ">Acciones</th>
+                    <th class="sticky  right-0 text-start p-2  left-0 top-0  bg-slate-300  ">Acciones</th>
 
                 </tr>
             </thead>
             <tbody class="relative">
                 @foreach ($installations as $installation)
-                    <tr class=" border-b-[1px] border-slate-600">
+                    <tr class=" border-b-[1px] border-slate-300">
                         <td class="p-3 min-w-32">{{ $installation->name }}</td>
                         <td class="p-3 min-w-32">{{ $installation->email }}</td>
                         <td class="p-3 min-w-32">{{ $installation->phone }}</td>

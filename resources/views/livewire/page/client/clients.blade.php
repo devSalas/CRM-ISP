@@ -19,10 +19,10 @@
 
 
 
-    <div class="w-full  relative overflow-x-auto">
+    <div class="w-full max-w-7xl  relative overflow-x-auto">
         <table class="table-auto  border-collapse  min-w-full">
             <thead class="pb-8 border-b-[1px] border-slate-800 ">
-                <tr class="text-start ">
+                <tr class="text-start bg-slate-300 rounded-2xl">
                     <th class="text-start p-2">id</th>
                     <th class="text-start p-2">Nombre</th>
                     <th class="text-start p-2">Correo</th>
@@ -34,7 +34,7 @@
             </thead>
             <tbody class="relative">
                 @foreach ($clients as $client)
-                    <tr class=" border-b-[1px] border-slate-600">
+                    <tr class=" border-b-[1px] border-slate-300">
                         <td class="p-3 min-w-32">{{ $client->id}}</td>
                         <td class="p-3 min-w-32">{{ $client->user->name }}</td>
                         <td class="p-3 min-w-32">{{ $client->user->email }}</td>

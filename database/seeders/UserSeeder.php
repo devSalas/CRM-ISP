@@ -21,11 +21,9 @@ class UserSeeder extends Seeder
             "phone"=>"927859435",
             "gender"=>"masculino",
             "age"=>"20",
-            "address"=>"Mz A lt 35",
             "DNI"=>"74702826",
             "CE"=>"22222222",
-            "zone"=>"los rosales",
-            "district"=>"San borja"
+
         ]);
         User::create([
             "name"=>"pedro salas",
@@ -34,11 +32,9 @@ class UserSeeder extends Seeder
             "phone"=>"927859435",
             "gender"=>"masculino",
             "age"=>"20",
-            "address"=>"Mz A lt 35",
             "DNI"=>"74702826",
             "CE"=>"22222222",
-            "zone"=>"los rosales",
-            "district"=>"San borja"
+           
         ]);
         User::create([
             "name"=>"ronal salas",
@@ -47,11 +43,9 @@ class UserSeeder extends Seeder
             "phone"=>"927859435",
             "gender"=>"masculino",
             "age"=>"20",
-            "address"=>"Mz A lt 35",
             "DNI"=>"74702826",
             "CE"=>"22222222",
-            "zone"=>"los rosales",
-            "district"=>"San borja"
+           
         ]);
         User::create([
             "name"=>"alejandro salas",
@@ -60,11 +54,9 @@ class UserSeeder extends Seeder
             "phone"=>"927859435",
             "gender"=>"masculino",
             "age"=>"20",
-            "address"=>"Mz A lt 35",
             "DNI"=>"74702826",
             "CE"=>"22222222",
-            "zone"=>"los rosales",
-            "district"=>"San borja"
+            
         ]);
         User::create([
             "name"=>"martin salas",
@@ -73,11 +65,9 @@ class UserSeeder extends Seeder
             "phone"=>"927859435",
             "gender"=>"masculino",
             "age"=>"20",
-            "address"=>"Mz A lt 35",
             "DNI"=>"74702826",
             "CE"=>"22222222",
-            "zone"=>"los rosales",
-            "district"=>"San borja"
+            
         ]);
     }
 }

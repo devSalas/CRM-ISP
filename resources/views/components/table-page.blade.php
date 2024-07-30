@@ -1,4 +1,4 @@
-{{-- resources/views/components/table-component.blade.php --}}
+
 <div x-data="{ showModalDelete: @entangle('showModalDelete') }" class="w-full overflow-hidden gap-8 p-8">
     <h1 class="mb-8 text-4xl">{{ $title }}</h1>
     <div class="mb-8">
@@ -7,10 +7,9 @@
             {{ $createButtonText }}
         </a>
     </div>
-    <div x-text="showModalDelete"></div>
-    <div class="w-full overflow-auto relative">
+    <div class="max-w-7xl w-full overflow-auto relative">
         <table class="table-auto border-collapse min-w-full">
-            <thead class="pb-8 border-b-[1px] border-slate-800">
+            <thead class="pb-8  bg-fourth">
                 <tr class="text-start">
                     @foreach ($headers as $header)
                         <th class="text-start p-2">{{ $header }}</th>
@@ -20,7 +19,7 @@
             </thead>
             <tbody>
                 @foreach ($items as $item)
-                    <tr class="border-b-[1px] border-slate-600">
+                    <tr class="border-b-[1px] border-fourth">
                         @foreach ($columns as $column)
                             <td class="p-3 min-w-32">{{ $item[$column] }}</td>
                         @endforeach

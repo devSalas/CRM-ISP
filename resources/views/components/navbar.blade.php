@@ -2,11 +2,7 @@
     $currentRoute = Route::currentRouteName();
 
     $items = [
-        'dashboard' => [
-            'img' => 'img/icon/dashboard-icon.svg',
-            'path' => 'dashboard',
-            'title' => 'Dashboard',
-        ],
+       
         'users' => [
             'img' => 'img/icon/users-icon.svg',
             'path' => 'users',

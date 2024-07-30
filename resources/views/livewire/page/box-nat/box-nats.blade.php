@@ -8,24 +8,24 @@
         </a>
     </div>
    
-    <div class="w-full  overflow-hidden  relative ">
+    <div class="max-w-7xl w-full  overflow-hidden  relative ">
 
-        <table class="table-auto  border-collapse  min-w-full overflow-scroll    ">
-            <thead class="pb-8 border-b-[1px] border-slate-800 ">
+        <table class="table-auto  border-collapse   min-w-full overflow-scroll    ">
+            <thead class="pb-8  bg-fourth ">
                 <tr class="text-start ">
                     <th class="text-start p-2">Nombre</th>
                     <th class="text-start p-2">descripción</th>
                     <th class="text-start p-2">Estado</th>
 
-                    <th class="sticky  right-0 text-start p-2  left-0 top-0    ">Acciones</th>
+                    <th class="sticky  right-0 text-center p-2  left-0 top-0    ">Acciones</th>
 
                 </tr>
             </thead>
             <tbody class="">
                 @foreach ($boxNats as $boxNat)
-                    <tr class=" border-b-[1px] border-slate-600 ">
+                    <tr class=" border-b-[1px] border-slate-300 ">
                         <td class="p-3 min-w-32">{{ $boxNat->name }}</td>
-                        <td class="p-3 min-w-32">{{ $boxNat->description }}</td>
+                        <td class="p-3 min-w-64">{{ $boxNat->description }}</td>
                         <td class="p-3 min-w-32">{{ $boxNat->state }}</td>
 
                         <td class="sticky  bg-primary text-start  inset-0 h-full w-full">

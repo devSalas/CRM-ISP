@@ -23,11 +23,8 @@ return new class extends Migration
             $table->string('phone')->nullable();
             $table->string('gender')->nullable();
             $table->integer('age')->nullable();
-            $table->string('address')->nullable();
             $table->string('DNI',8)->nullable();
             $table->string('CE')->nullable();
-            $table->string('zone')->nullable();
-            $table->string('district')->nullable();
             $table->timestamps();
         });
 

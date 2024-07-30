@@ -25,6 +25,9 @@ return new class extends Migration
             $table->unsignedBigInteger("payment_commitment_id");
             $table->string("SN")->nullable();
             $table->string("port_box_nat")->nullable();
+            $table->string('address')->nullable();
+            $table->string('zone')->nullable();
+            $table->string('district')->nullable();
             $table->unsignedBigInteger("hire_date");
             $table->unsignedBigInteger("finish_date")->nullable();
             $table->timestamps();

@@ -12,7 +12,7 @@ class="  gap-8   p-8">
     <div class="w-full overflow-auto relative">
 
         <table class="table-auto  border-collapse  min-w-full   ">
-            <thead class="pb-8 border-b-[1px] border-slate-800 ">
+            <thead class="pb-8  bg-slate-300 ">
                 <tr class="text-start ">
                     <th class="text-start p-2">cliente</th>
                     <th class="text-start p-2">N* contrato</th>
@@ -28,14 +28,14 @@ class="  gap-8   p-8">
                     <th class="text-start p-2">compromiso de pago</th>
                     <th class="text-start p-2">Fecha de contratación</th>
                     <th class="text-start p-2">Fecha de cancelación</th>
-                    <th class="sticky  right-0 text-start p-2  left-0 top-0    ">Acciones</th>
+                    <th class="sticky  right-0 text-start px-4  left-0 top-0   bg-slate-300 ">Acciones</th>
 
                 </tr>
             </thead>
             <tbody class="">
                 @foreach ($contracts as $contract)
-                <tr class=" border-b-[1px] border-slate-600 ">
-                        <td class="p-3 min-w-32">{{ $contract->client->user->name }}</td>
+                <tr class=" border-b-[1px] border-slate-300 ">
+                        <td class="p-3 min-w-64">{{ $contract->client->user->name }}</td>
                         <td class="p-3 min-w-32">{{ $contract->code }}</td>
                         <td class="p-3 min-w-32">{{ $contract->worker->user->name }}</td>
                         <td class="p-3 min-w-32">

@@ -20,7 +20,7 @@ export default {
                 "primary":"#FFFFFF",
                 "secondary":"#2735B8",
                 "third":"#FFFFFF",
-                "fourth":"#161B1B",
+                "fourth":"#cbd5e1",
                 "txtprimary":"#00000",
                 "txtsecondary":"#FFFFFF",
                 "txtthird":"#879595",

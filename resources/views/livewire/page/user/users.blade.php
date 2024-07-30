@@ -9,11 +9,11 @@ class="  gap-8   p-8">
         </a>
     </div>
     {{-- este  --}}
-    <div class="w-full overflow-auto relative  rounded-lg">
+    <div class="w-full max-w-7xl overflow-auto relative">
 
-        <table class="table-auto  border-collapse  min-w-full  bg-blue-200 r ">
-            <thead class="pb-8 border-b-[1px] border-slate-800 ">
-                <tr class="text-start ">
+        <table class="table-auto  border-collapse  min-w-full   ">
+            <thead class="pb-8  ">
+                <tr class="text-start  bg-slate-300">
                     <th class="text-start p-2">Nombre</th>
                     <th class="text-start p-2">Correo</th>
                     <th class="text-start p-2">Telefono</th>
@@ -24,13 +24,13 @@ class="  gap-8   p-8">
                     <th class="text-start p-2">CE</th>
                     <th class="text-start p-2">Zona</th>
                     <th class="text-start p-2">Distrito</th>
-                    <th class="sticky  right-0 text-start p-2  left-0 top-0   bg-blue-300 ">Acciones</th>
+                    <th class="sticky  right-0 text-start p-2  left-0 top-0 bg-slate-300 ">Acciones</th>
 
                 </tr>
             </thead>
             <tbody class="">
                 @foreach ($users as $user)
-                    <tr class=" border-b-[1px] border-slate-600 ">
+                    <tr class=" border-b-[1px] border-slate-400 ">
                         <td class="p-3 min-w-32">{{ $user->name }}</td>
                         <td class="p-3 min-w-32">{{ $user->email }}</td>
                         <td class="p-3 min-w-32">{{ $user->phone }}</td>
@@ -41,7 +41,7 @@ class="  gap-8   p-8">
                         <td class="p-3 min-w-32">{{ $user->CE }}</td>
                         <td class="p-3 min-w-32">{{ $user->zone }}</td>
                         <td class="p-3 min-w-32">{{ $user->district }}</td>
-                        <td class="sticky  bg-blue-300 text-start  inset-0 h-full w-full p-2">
+                        <td class="sticky  bg-white text-start  inset-0 h-full w-full p-2">
                             <div class="w-full h-full  flex gap-2">
                                 <button 
                                     class=" rounded-full bg-secondary/20 p-2 w-8 h-8 "
