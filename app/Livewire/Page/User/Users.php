@@ -13,7 +13,6 @@ class Users extends Component
     public $showModalDelete = false;
 
 
-
     public function openModalDelete($id)
     {
 
@@ -35,6 +34,7 @@ class Users extends Component
 
     public function mount()
     {
+        
         $this->users = User::get();
     }
 

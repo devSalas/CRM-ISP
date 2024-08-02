@@ -52,9 +52,9 @@ class="  gap-8   p-8">
                                 <a href="{{ route('edit-user',[ 'id'=>$user->id]) }}"  class="block w-8 h-8  rounded-full bg-secondary/20 p-2">
                                     <img src="{{ asset('img/icon/edit-icon.svg') }}" class="w-full h-full" alt="">
                                 </a>
-                              {{--   <a href="{{ route('users-id',[ 'id'=>$user->id]) }}"  class="block w-8 h-8  rounded-full bg-secondary/20 p-2">
-                                    <img src="{{ asset('img/icon/edit-icon.svg') }}" class="w-full h-full" alt="">
-                                </a> --}}
+                                <a href="{{ route('users-id',[ 'id'=>$user->id]) }}"  class="block w-8 h-8  rounded-full bg-secondary/20 p-2">
+                                    <img src="{{ asset('img/icon/eye-icon.svg') }}" class="w-full h-full" alt="">
+                                </a>
                             </div>
 
                         </td>

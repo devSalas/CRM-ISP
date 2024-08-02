@@ -24,7 +24,7 @@
         <div></div>
 
         <div class="w-full col-span-3  flex justify-end gap-4 ">
-            <x-button type="button">Limpiar </x-button>
+            <a href="{{ route('services')}}"><x-button type="button">Cancelar </x-button></a>
             <x-button wire:click="updateUser">Actualizar </x-button>
         </div>
     </form>

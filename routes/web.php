@@ -5,6 +5,8 @@ use App\Livewire\Page\BoxNat\BoxNatCreate;
 use App\Livewire\Page\BoxNat\BoxNatEdit;
 use App\Livewire\Page\BoxNat\BoxNats;
 use App\Livewire\Page\Client\Clients;
+use App\Livewire\Page\Contract\ContractCreate;
+use App\Livewire\Page\Contract\ContractEdit;
 use App\Livewire\Page\Contract\Contracts;
 use App\Livewire\Page\Dashboard;
 use App\Livewire\Page\Installation\InstallationCreate;
@@ -37,10 +39,20 @@ Route::middleware([
     })->name('dashboard'); */
 
 
-    Route::get('/users', Users::class)->name("users");
-    Route::get('/users/create', UserCreate::class)->name("create-user");
-    Route::get('/users/{id}', UserId::class)->name("users-id");
-    Route::get('/users/edit/{id}', UserEdit::class)->name("edit-user");
+// Ruta para editar un usuario específico
+Route::get('/users/edit/{id}', UserEdit::class)->name('edit-user');
+
+// Ruta para ver un usuario específico por su ID
+Route::get('/users/{id}', UserId::class)->name('users-id');
+
+// Ruta para crear un nuevo usuario
+Route::get('/users/create', UserCreate::class)->name('create-user');
+
+// Ruta para listar todos los usuarios
+Route::get('/users', Users::class)->name('users');
+
+
+
     Route::get('/dashboard', Dashboard::class)->name("dashboard");
     Route::get('/routers', Routers::class)->name("routers");
     Route::get('/boxnats', BoxNats::class)->name("boxnats");
@@ -63,7 +75,9 @@ Route::middleware([
   /*       Route::get('/clients/create',Create::class)->name("create-worker"); */
     Route::get('/clients/edit/{id}',WorkerEdit::class)->name("edit-worker");
     Route::get('/clients', Clients::class)->name("clients");
-
+    /* ---------contract------- new */
+    Route::get('/contracts/edit/{id}', ContractEdit::class)->name("contract-edit");
+    Route::get('/contracts/create', ContractCreate::class)->name("contract-create");
     Route::get('/contracts', Contracts::class)->name("contracts");
 
     Route::get('/activities', Activities::class)->name("activities");

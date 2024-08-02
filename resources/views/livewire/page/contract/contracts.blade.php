@@ -3,7 +3,7 @@ class="  gap-8   p-8">
 
     <h1 class="mb-8 text-4xl">Contrato</h1>
     <div class="mb-8">
-        <a href="{{ route('create-user') }}"
+        <a href="{{ route('contract-create') }}"
             class="bg-secondary py-2 px-4 border-[0.5px] border-third text-txtsecondary  rounded-md">
             Crear Contrato
         </a>
@@ -71,7 +71,7 @@ class="  gap-8   p-8">
                                         alt="">
                                 </button>
 
-                                <a href="{{ route('edit-installation', ['id' => $contract->id]) }}"
+                                <a href="{{ route('contract-edit', ['id' => $contract->id]) }}"
                                     class="block w-8 h-8 rounded-full bg-secondary/20 p-2 aspect-square">
                                     <img src="{{ asset('img/icon/edit-icon.svg') }}" class="w-full h-full" alt>
                                 </a>

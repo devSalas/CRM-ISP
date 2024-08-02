@@ -10,10 +10,11 @@ class UserId extends Component
 
     public $id;
     public $user;
-
+    public $userRoles;
     public function mount($id){
         try {
             $this->user = User::findOrFail($id);
+            $this->userRoles = $this->user->getRoleNames();
         } catch (\Exception $e) {
             abort(404); // Redirige a una página de error 404 si el usuario no se encuentra
         }

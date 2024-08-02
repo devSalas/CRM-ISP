@@ -1,5 +1,5 @@
 <div class="p-8 w-full">
-    <h2 class="text-4xl mb-8">Crear Caja Nat</h2>
+    <h2 class="text-4xl mb-8">Crear Caja Nap</h2>
     <form wire:submit="save" class="grid grid-cols-3   gap-4 w-full ">
 
         <x-label>

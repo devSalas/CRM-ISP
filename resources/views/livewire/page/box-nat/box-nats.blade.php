@@ -1,10 +1,10 @@
 <div x-data="{ showModalDelete: @entangle('showModalDelete') }" class="w-full  gap-8   p-8">
 
-    <h1 class="mb-8 text-4xl">Cajas Nats</h1>
+    <h1 class="mb-8 text-4xl">Cajas Naps</h1>
     <div class="mb-8">
         <a href="{{ route('create-boxnat') }}"
             class="bg-secondary py-2 px-4 border-[0.5px] border-third text-txtsecondary  rounded-md">
-            Crear Caja Nat
+            Crear Caja Nap
         </a>
     </div>
    
@@ -21,7 +21,7 @@
 
                 </tr>
             </thead>
-            <tbody class="">
+            <tbody>
                 @foreach ($boxNats as $boxNat)
                     <tr class=" border-b-[1px] border-slate-300 ">
                         <td class="p-3 min-w-32">{{ $boxNat->name }}</td>
@@ -54,7 +54,6 @@
 
 
         <div x-show="showModalDelete" @click.away="showModalDelete=false">
-            hola
             <x-modal id={{ $id }}>
                 <div class="p-8 flex flex-col gap-4">
                     Estas seguro que desea eliminar el
@@ -62,9 +61,7 @@
                         <x-button @click="showModalDelete=false">Cancelar</x-button>
                         <x-danger-button wire:click="delete">Eliminar</x-danger-button>
                     </div>
-                    @if ($message)
-                        <div>{{ $message }}</div>
-                    @endif
+                    
                 </div>
             </x-modal>
         </div>
