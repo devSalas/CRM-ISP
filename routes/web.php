@@ -13,6 +13,8 @@ use App\Livewire\Page\Installation\InstallationCreate;
 use App\Livewire\Page\Installation\InstallationEdit;
 use App\Livewire\Page\Installation\Installations;
 use App\Livewire\Page\Router\Routers;
+use App\Livewire\Page\Sale\SaleCreate;
+use App\Livewire\Page\Sale\Sales;
 use App\Livewire\Page\Service\ServiceCreate;
 use App\Livewire\Page\Service\ServiceEdit;
 use App\Livewire\Page\Service\Services;
@@ -81,4 +83,10 @@ Route::get('/users', Users::class)->name('users');
     Route::get('/contracts', Contracts::class)->name("contracts");
 
     Route::get('/activities', Activities::class)->name("activities");
+
+
+    /* ventas */
+    Route::get('/sales/create',SaleCreate::class)->name("sale-create");
+    Route::get('/sales',Sales::class)->name("sales");
+
 });

@@ -44,6 +44,11 @@
             'path' => 'activities',
             'title' => 'Actividades',
         ],
+        'ventas' => [
+            'img' => 'img/icon/sale-icon.svg',
+            'path' => 'sales',
+            'title' => 'Ventas',
+        ],
     ];
 @endphp
 

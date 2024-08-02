@@ -67,6 +67,12 @@ class Navbar extends Component
                 'title' => 'Actividades',
                 'roles' => ['admin', 'user'],
             ],
+            'sales' => [ // Renombrado para consistencia
+                'img' => 'img/icon/sale-icon.svg',
+                'path' => 'sales',
+                'title' => 'ventas',
+                'roles' => ['admin', 'user'],
+            ],
         ];
     }
 
