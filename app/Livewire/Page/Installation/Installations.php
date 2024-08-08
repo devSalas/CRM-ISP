@@ -55,17 +55,12 @@ class Installations extends Component
         $this->loadAllInstallations();
     }
 
-
-    public function openModalDelete($id)
-    {
-
-        $this->id = $id;
-    }
     
-    public function delete()
+    public function delete($id)
     {
-        if ($this->id) {
-            Installation::find($this->id)->delete();
+       /*  dd($id); */
+        if ($id) {
+            Installation::find($id)->delete();
             $this->showModalDelete = false;
             $this->installations= Installation::get();
         } else {

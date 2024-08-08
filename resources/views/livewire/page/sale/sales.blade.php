@@ -1,4 +1,4 @@
-<div x-data="{ showModalDelete: @entangle('showModalDelete') }" class="mb-16">
+<div x-data="{ showModalDelete: @entangle('showModalDelete'), selectedId: null }"class="mb-16">
 
     <h1 class="mb-8 text-4xl">Ventas</h1>
     <div class="mb-8">
@@ -51,14 +51,14 @@
                         <td class="sticky min-w-16 bg-white   text-start  inset-0 ">
 
                             <div class="w-full h-full  flex gap-2">
-                                <button wire:click="openModalDelete({{ $sale->id }})"
+                                <button 
                                     class=" rounded-full bg-secondary/20 p-2 w-8 h-8 "
-                                    @click="showModalDelete=true;id={{ $sale->id }}">
+                                    @click="showModalDelete=true;selectedId={{ $sale->id }}">
                                     <img src="{{ asset('img/icon/trash-icon.svg') }}" class="w-full h-full"
                                         alt="">
                                 </button>
 
-                                <a href="{{ route('edit-installation', ['id' => $sale->id]) }}"
+                                <a href="{{ route('sale-edit', ['id' => $sale->id]) }}"
                                     class="block w-8 h-8 rounded-full bg-secondary/20 p-2 aspect-square">
                                     <img src="{{ asset('img/icon/edit-icon.svg') }}" class="w-full h-full" alt>
                                 </a>
@@ -73,19 +73,18 @@
     </div>
 
 
-    <div x-show="showModalDelete" @click.away="showModalDelete=false">
-        hola
-        <x-modal id={{ $id }}>
-            <div class="p-8 flex flex-col gap-4">
-                Estas seguro que desea eliminar el
-                <div class="flex justify-end gap-4">
-                    <x-button @click="showModalDelete=false">Cancelar</x-button>
-                    <x-danger-button wire:click="delete">Eliminar</x-danger-button>
-                </div>
-              
+    <x-modal wire:model="showModalDelete" >
+        <div class="p-8 flex flex-col gap-4">
+            <p>¿Estás seguro de que deseas eliminar esta instalación?</p>
+            <div class="flex justify-end gap-4">
+                <x-button @click="showModalDelete = false">Cancelar</x-button>
+                <x-danger-button wire:click="delete(selectedId)">Eliminar</x-danger-button>
             </div>
-        </x-modal>
-    </div>
+            @if ($message)
+                <div>{{ $message }}</div>
+            @endif
+        </div>
+    </x-modal>
 
 
 

@@ -18,35 +18,14 @@ class UserCreate extends Component
 
     public function save()
     {
-       /*  dd($this->UserCreate); */
-
-        $this->user = User::create(
-            $this->UserCreate->only(['name', 'password', 'email', 'phone', 'gender', 'age', 'address', 'DNI', 'CE', 'zone', 'district'])
-        );
-
-        if (count($this->UserCreate->roles)>0) {
-            foreach ($this->UserCreate->roles as $key => $role) {
-                $this->user->roles()->attach($role);
-
-                if($role == 2){
-                    $workerCreated =Worker::create([
-                        "user_id"=>$this->user->id
-                    ]);
-                }
-                if($role ==3){
-                    $clientCreated =Client::create([
-                        "user_id"=>$this->user->id
-                    ]);
-                }
-            }   
-        }
-
-
         $this->UserCreate->validate();
 
-
+        $this->user = User::create(
+            $this->UserCreate->only(['name', 'password', 'email', 'phone', 'gender', 'age', 'DNI', 'CE'])
+        );
 
         $this->UserCreate->reset();
+        
         $this->redirect("/users");
     }
 

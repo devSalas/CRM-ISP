@@ -57,7 +57,7 @@ class RoleSeeder extends Seeder
         $viewVentas = Permission::create(['name'=>'edit installation']);
         $viewVentas = Permission::create(['name'=>'create installation']);
         
-
+        
 
 
 

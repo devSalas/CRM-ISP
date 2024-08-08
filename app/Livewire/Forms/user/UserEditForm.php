@@ -10,9 +10,6 @@ class UserEditForm extends Form
 {
 
     #[Rule('required')]
-    public $roles=[];
-    
-    #[Rule('required')]
     public $name;
 
     #[Rule('required')]
@@ -27,19 +24,10 @@ class UserEditForm extends Form
     #[Rule('required')]
     public $age;
 
-    #[Rule('required')]
-    public $address;
-
-    #[Rule('required')]
     public $DNI;
-
 
     public $CE;
 
-    #[Rule('required')]
-    public $zone;
 
-    #[Rule('required')]
-    public $district;
 
 }

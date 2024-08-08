@@ -8,13 +8,11 @@ use Livewire\Form;
 
 class UserCreateForm extends Form
 {
-    #[Rule('required')]
-    public $roles=[];
 
     #[Rule('required')]
     public $name;
 
-    #[Rule('required')]
+    #[Rule('required|email|unique:users,email')]
     public $email;
 
     #[Rule('required')]
@@ -24,24 +22,15 @@ class UserCreateForm extends Form
     public $phone;
 
     #[Rule('required')]
-    public $gender;
+    public $gender; 
 
     #[Rule('required')]
     public $age;
 
-    #[Rule('required')]
-    public $address;
-
-    #[Rule('required')]
     public $DNI;
-
 
     public $CE;
 
-    #[Rule('required')]
-    public $zone;
 
-    #[Rule('required')]
-    public $district;
 
 }

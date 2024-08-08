@@ -12,8 +12,10 @@ use App\Livewire\Page\Dashboard;
 use App\Livewire\Page\Installation\InstallationCreate;
 use App\Livewire\Page\Installation\InstallationEdit;
 use App\Livewire\Page\Installation\Installations;
+use App\Livewire\Page\Privilege\Privileges;
 use App\Livewire\Page\Router\Routers;
 use App\Livewire\Page\Sale\SaleCreate;
+use App\Livewire\Page\Sale\SaleEdit;
 use App\Livewire\Page\Sale\Sales;
 use App\Livewire\Page\Service\ServiceCreate;
 use App\Livewire\Page\Service\ServiceEdit;
@@ -41,17 +43,17 @@ Route::middleware([
     })->name('dashboard'); */
 
 
+    Route::get('/users/edit/{id}', UserEdit::class)->name('edit-user');
+    Route::get('/users/create', UserCreate::class)->name('create-user');
+    Route::get('/users/{id}', UserId::class)->name('users-id');
+    Route::get('/users', Users::class)->name('users');
 // Ruta para editar un usuario específico
-Route::get('/users/edit/{id}', UserEdit::class)->name('edit-user');
 
 // Ruta para ver un usuario específico por su ID
-Route::get('/users/{id}', UserId::class)->name('users-id');
 
 // Ruta para crear un nuevo usuario
-Route::get('/users/create', UserCreate::class)->name('create-user');
 
 // Ruta para listar todos los usuarios
-Route::get('/users', Users::class)->name('users');
 
 
 
@@ -86,7 +88,10 @@ Route::get('/users', Users::class)->name('users');
 
 
     /* ventas */
+    Route::get('/sales/edit/{id}',SaleEdit::class)->name("sale-edit");
     Route::get('/sales/create',SaleCreate::class)->name("sale-create");
     Route::get('/sales',Sales::class)->name("sales");
+
+    Route::get('/privileges/{id}',Privileges::class)->name("privileges");
 
 });

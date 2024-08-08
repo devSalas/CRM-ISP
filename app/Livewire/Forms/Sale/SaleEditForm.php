@@ -6,7 +6,7 @@ use Livewire\Attributes\Rule;
 use Livewire\Attributes\Validate;
 use Livewire\Form;
 
-class SaleCreateForm extends Form
+class SaleEditForm extends Form
 {
     #[Rule('required')]
     public $name;
@@ -38,5 +38,4 @@ class SaleCreateForm extends Form
 
     #[Rule('required|exists:users,id')]
     public $user_id;
-
 }
