@@ -1,8 +1,11 @@
 <div class="p-8 w-full">
+
+
     <h2 class="text-4xl mb-8">Crear Usuarios</h2>
+
+
     <form wire:submit="save" class="grid grid-cols-3   gap-4 w-full ">
 
-    
         <x-label>
             Nombre
             <x-input wire:model="UserCreate.name" class="w-full"></x-input>
@@ -51,17 +54,43 @@
             <x-input-error for="UserCreate.CE" />
         </x-label>
 
+        <div class="grid grid-cols-3 col-span-3">
+            <div>
+                Roles
+                @foreach ($roles as $rol)
+                    <x-label class="p-2">
+                        <input type="checkbox" name="option1" value="{{ $rol->id }}" wire:model="UserCreate.roles">
+                        {{ $rol->name }}
+                        <hr>
+                    </x-label>
+                @endforeach
+            </div>
+        </div>
+
+
 
         <div></div>
 
-        <div class="w-full col-span-3  flex justify-end gap-4 ">
+        <div class="w-full  justify-end gap-4 ">
             <a href="{{ route('users') }}">
                 <x-button type="button">Cancelar </x-button>
             </a>
             <x-button>Crear </x-button>
         </div>
 
-        
+
     </form>
+    @if (session()->has('error'))
+        <div class="alert alert-danger">
+            {{ session('error') }}
+        </div>
+    @endif
+
+    @if (session()->has('message'))
+        <div class="alert alert-success">
+            {{ session('message') }}
+        </div>
+    @endif
+
 
 </div>

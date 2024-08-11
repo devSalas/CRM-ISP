@@ -1,7 +1,11 @@
 <div class="p-8 w-full">
     <h2 class="text-4xl mb-8">Editar Usuario</h2>
 
-    <a href="">ROL Y PRIVILEGIO</a>
+    <div class="my-3 mb-8">
+        <a href="{{route('privileges',['id'=> $userId]) }}">
+            <x-button class="py-3">Cambiar Privilegios</x-button>
+        </a>
+    </div>
 
     <form wire:submit="updateUser" class="grid grid-cols-3   gap-4 w-full ">
    
