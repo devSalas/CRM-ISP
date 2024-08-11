@@ -25,16 +25,16 @@ class DatabaseSeeder extends Seeder
         $this->call([
          
             UserSeeder::class,
-            WorkerSeeder::class,
-            ClientSeeder::class, 
+          /*   WorkerSeeder::class, */
+          /*   ClientSeeder::class,  */
             BoxNatSeeder::class,
             RouterSeeder::class,
             ServiceSeeder::class,
-            InstallationSeeder::class,
+            /* InstallationSeeder::class, */
             PaymentCommitmentSeeder::class,
-            ContractSeeder::class,
-            InstallationIssueSeeder::class,
-            SaleSeeder::class,
+           /*  ContractSeeder::class, */
+           /*  InstallationIssueSeeder::class, */
+           /*  SaleSeeder::class, */
             RoleSeeder::class
             
         ]);

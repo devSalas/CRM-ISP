@@ -36,8 +36,8 @@
                 @foreach ($clients as $client)
                     <tr class=" border-b-[1px] border-slate-300">
                         <td class="p-3 min-w-32">{{ $client->id}}</td>
-                        <td class="p-3 min-w-32">{{ $client->user->name }}</td>
-                        <td class="p-3 min-w-32">{{ $client->user->email }}</td>
+                        <td class="p-3 min-w-32">{{ $client->name }}</td>
+                        <td class="p-3 min-w-32">{{ $client->email }}</td>
                        
 
                        {{--  <td class="sticky min-w-16 bg-white   text-start  inset-0 ">

@@ -16,28 +16,8 @@
                 @foreach ($workers as $worker)
                     <tr class=" border-b-[1px] border-slate-300">
                         <td class="p-3 min-w-32">{{ $worker->id}}</td>
-                        <td class="p-3 min-w-32">{{ $worker->user->name }}</td>
-                        <td class="p-3 min-w-32">{{ $worker->user->email }}</td>
-                       
-
-                       {{--  <td class="sticky min-w-16 bg-white   text-start  inset-0 ">
-
-                            <div class="w-full h-full  flex gap-2">
-                                <button wire:click="openModalDelete({{ $worker->id }})"
-                                    class=" rounded-full bg-secondary/20 p-2 w-8 h-8 "
-                                    @click="showModalDelete=true;id={{ $worker->id }}">
-                                    <img src="{{ asset('img/icon/trash-icon.svg') }}" class="w-full h-full"
-                                        alt="">
-                                </button>
-
-                                <a href="{{ route('edit-installation', ['id' => $worker->id]) }}"
-                                    class="block w-8 h-8 rounded-full bg-secondary/20 p-2 aspect-square">
-                                    <img src="{{ asset('img/icon/edit-icon.svg') }}" class="w-full h-full" alt>
-                                </a>
-                            </div>
-
-                        </td> --}}
-
+                        <td class="p-3 min-w-32">{{ $worker->name }}</td>
+                        <td class="p-3 min-w-32">{{ $worker->email }}</td>
                     </tr>
                 @endforeach
 

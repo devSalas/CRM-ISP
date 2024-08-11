@@ -14,14 +14,6 @@ class ClientSeeder extends Seeder
      */
     public function run(): void
     {
-        Client::create([
-            "id"=>1,
-            "user_id"=>4
-        ]);
-        Client::create([
-            "id"=>2,
-            "user_id"=>5
-        ]);
-
+        
     }
 }
