@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ExcelController;
 use App\Livewire\Page\Activity\Activities;
 use App\Livewire\Page\BoxNat\BoxNatCreate;
 use App\Livewire\Page\BoxNat\BoxNatEdit;
@@ -55,6 +56,7 @@ Route::middleware([
 
 // Ruta para listar todos los usuarios
 
+    Route::get('/excel', [ExcelController::class,"import"])->name("excel");
 
 
     Route::get('/dashboard', Dashboard::class)->name("dashboard");
