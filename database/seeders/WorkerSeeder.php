@@ -22,6 +22,8 @@ class WorkerSeeder extends Seeder
             "id" => 2,
             "user_id"=>3
         ]);
+
+        
     
     }
 }
