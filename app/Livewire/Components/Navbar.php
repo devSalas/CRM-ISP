@@ -10,20 +10,22 @@ class Navbar extends Component
 {
     public $items = [];
     public $currentRoute;
-    public $filteredItems;
+    public $filteredItems = [];
     public $user;
+
     public function mount()
     {
         $this->currentRoute = Route::currentRouteName();
-        // Obtener el usuario actual
+
         $this->user = Auth::user();
-        // Definir los elementos de la barra de navegación
+     
+        
         $this->items = [
             'users' => [
                 'img' => 'img/icon/users-icon.svg',
                 'path' => 'users',
                 'title' => 'Usuarios',
-                'roles' => ['admin'],
+                'roles' => ['client'],
             ],
             'workers' => [
                 'img' => 'img/icon/worker-icon.svg',
@@ -37,7 +39,7 @@ class Navbar extends Component
                 'title' => 'Clientes',
                 'roles' => ['admin'],
             ],
-            'contracts' => [ // Renombrado para consistencia
+            'contracts' => [
                 'img' => 'img/icon/contract-icon.svg',
                 'path' => 'contracts',
                 'title' => 'Contratos',
@@ -49,42 +51,48 @@ class Navbar extends Component
                 'title' => 'Routers',
                 'roles' => ['admin'],
             ],
-            'boxnats' => [ // Renombrado para consistencia
+            'boxnats' => [
                 'img' => 'img/icon/nat-icon.svg',
                 'path' => 'boxnats',
                 'title' => 'Cajas Nat',
                 'roles' => ['admin'],
             ],
-            'services' => [ // Renombrado para consistencia
+            'services' => [
                 'img' => 'img/icon/services-icon.svg',
                 'path' => 'services',
                 'title' => 'Servicios',
                 'roles' => ['admin', 'user'],
             ],
-            'activities' => [ // Renombrado para consistencia
+            'activities' => [
                 'img' => 'img/icon/installer-icon.svg',
                 'path' => 'activities',
                 'title' => 'Actividades',
                 'roles' => ['admin', 'user'],
             ],
-            'sales' => [ // Renombrado para consistencia
+            'sales' => [
                 'img' => 'img/icon/sale-icon.svg',
                 'path' => 'sales',
-                'title' => 'ventas',
+                'title' => 'Ventas',
                 'roles' => ['admin', 'user'],
             ],
         ];
+        $this->filterItemsByRole();
+    }
+
+    public function filterItemsByRole()
+    {
+        $this->filteredItems = collect($this->items)->filter(function ($item) {
+    
+            return $this->user->hasAnyRole($item['roles']);
+        })->toArray();
+
+       
     }
 
     public function render()
     {
-      
-
-        // Filtrar los elementos según los roles del usuario
-        $this->filteredItems = array_filter($this->items, function($item) {
-            return $this->user->hasAnyRole($item['roles']);
-        });
-
-        return view('livewire.components.navbar');
+        return view('livewire.components.navbar', [
+            'data' => $this->filteredItems,
+        ]);
     }
 }

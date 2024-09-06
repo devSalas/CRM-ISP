@@ -6,48 +6,57 @@
             'img' => 'img/icon/users-icon.svg',
             'path' => 'users',
             'title' => 'Usuarios',
+            'roles' => ['admin'],
         ],
         'workers' => [
             'img' => 'img/icon/worker-icon.svg',
             'path' => 'workers',
             'title' => 'Trabajadores',
+            'roles' => ['admin', 'worker'],
         ],
         'clients' => [
             'img' => 'img/icon/client-icon.svg',
             'path' => 'clients',
             'title' => 'clients',
+            'roles' => ['admin', 'worker'],
         ],
         'contratos' => [
             'img' => 'img/icon/contract-icon.svg',
             'path' => 'contracts',
             'title' => 'contractos',
+            'roles' => ['admin', 'worker'],
         ],
         'routers' => [
             'img' => 'img/icon/router-icon.svg',
             'path' => 'routers',
             'title' => 'Routers',
+            'roles' => ['admin', 'worker'],
         ],
 
         'Caja Nats' => [
             'img' => 'img/icon/nat-icon.svg',
             'path' => 'boxnats',
             'title' => 'Cajas Nat',
+            'roles' => ['admin', 'worker'],
         ],
 
         'Servicios' => [
             'img' => 'img/icon/services-icon.svg',
             'path' => 'services',
             'title' => 'Servicios',
+            'roles' => ['admin', 'worker'],
         ],
         'Instalaciones' => [
             'img' => 'img/icon/installer-icon.svg',
             'path' => 'activities',
             'title' => 'Actividades',
+            'roles' => ['admin', 'worker'],
         ],
         'ventas' => [
             'img' => 'img/icon/sale-icon.svg',
             'path' => 'sales',
             'title' => 'Ventas',
+            'roles' => ['admin', 'worker'],
         ],
     ];
 @endphp
@@ -64,15 +73,18 @@
 
     <div class="flex flex-col gap-8 pt-8 justify-start rounded-r-2xl   text-white">
 
-        @role('admin')
-            @foreach ($items as $item)
+
+        @foreach ($items as $item)
+            @if (auth()->user()->hasRole($section['roles']))
                 <a href="{{ route($item['path']) }}"
                     class="flex justify-start items-center gap-4 px-8 py-4 w-full   {{ $currentRoute == $item['path'] ? 'bg-third text-black' : '' }}">
                     <img src="{{ asset($item['img']) }}" class="min-w-8 max-w-8" alt="">
                     <span :class="large ? '' : 'hidden'">{{ $item['title'] }}</span>
                 </a>
+
             @endforeach
-        @endrole
+        @endforeach
+
 
     </div>
 

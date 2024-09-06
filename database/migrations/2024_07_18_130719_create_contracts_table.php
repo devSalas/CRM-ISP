@@ -22,7 +22,7 @@ return new class extends Migration
             $table->unsignedBigInteger("service_id");
             $table->unsignedBigInteger("box_nat_id");
             $table->unsignedBigInteger("router_id");
-            $table->unsignedBigInteger("payment_commitment_id");
+            $table->unsignedBigInteger("payme nt_commitment_id");
             $table->string("SN")->nullable();
             $table->string("port_box_nat")->nullable();
             $table->string('address')->nullable();

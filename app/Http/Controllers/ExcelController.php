@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use PhpOffice\PhpSpreadsheet\Cell\Coordinate;
 use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Reader\Xls;
 
@@ -13,28 +14,28 @@ class ExcelController extends Controller
         return view("excel");
     }
 
+
+
+
+    
     public function import()
     {
-        // Ruta del archivo Excel en la carpeta public
-        $filePath = public_path('developers.xlsx');
-
-        // Cargar el archivo Excel
+        set_time_limit(300); // Extiende el tiempo de ejecución
+    
+        // Ruta al archivo Excel
+        $filePath = public_path('prueba1.xlsx');
+    
+        // Cargar el archivo de Excel
         $spreadsheet = IOFactory::load($filePath);
-
-        // Obtener la primera hoja (sheet)
+    
+        // Seleccionar la hoja activa por nombre (puedes cambiar 'gigamas' por el nombre real de la hoja)
+        $spreadsheet->setActiveSheetIndexByName('gigamas');
         $sheet = $spreadsheet->getActiveSheet();
+    
+        $data = $sheet->toArray();
 
-        // Extraer los datos (ejemplo: desde la fila 2 para saltar el encabezado)
-        $data = [];
-        foreach ($sheet->getRowIterator(1) as $row) {
-            $rowData = [];
-            foreach ($row->getCellIterator() as $cell) {
-                $rowData[] = $cell->getValue();
-            }
-            $data[] = $rowData;
-        }
-        dd($data);
-        // Enviar los datos a la vista
-        return view('dashboard');
+        // Mostrar los datos extraídos
+        dd($data); // Utiliza `dd()` para depuración, puedes cambiarlo por `print_r($data)` si es necesario
     }
+    
 }

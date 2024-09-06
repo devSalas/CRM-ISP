@@ -25,19 +25,19 @@ class UserSeeder extends Seeder
             "CE"=>"no defino",
         ]);
 /*         User::create([
-            "name"=>"pedro salas",
-            "email"=>"pedro@gmail.com",
+            "name"=>"Sebastian",
+            "email"=>"sebastian@gmail.com",
             "password"=>Hash::make("12345678"),
-            "phone"=>"927859435",
+            "phone"=>"8888888888",
             "gender"=>"masculino",
-            "age"=>"20",
-            "DNI"=>"74702826",
-            "CE"=>"22222222",
+            "age"=>"21",
+            "DNI"=>"000000000",
+            "CE"=>"",
            
         ]);
         User::create([
-            "name"=>"ronal salas",
-            "email"=>"ronal@gmail.com",
+            "name"=>"Jorge Boluarte",
+            "email"=>"jorge@gmail.com",
             "password"=>Hash::make("12345678"),
             "phone"=>"927859435",
             "gender"=>"masculino",
