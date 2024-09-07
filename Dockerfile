@@ -10,7 +10,7 @@ WORKDIR /app
 
 COPY . .
 RUN rm -rf /app/vendor
-RUN rn -rf /app/composer.lock
+RUN rm -rf /app/composer.lock
 RUN composer install
 RUN composer require laravel/octane spiral/roadrunner
 COPY .env.example .env 
