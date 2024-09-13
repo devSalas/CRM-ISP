@@ -50,8 +50,9 @@
         <x-label>
             Trabajador
             <select wire:model="InstallationCreate.worker_id" name="" id="" class="w-full">
-                 @foreach ($workers as $worker )
-                     <option value="{{$worker->id}}"> {{$worker->user->name}}</option>
+                <option value="">Selección un trabajador</option> 
+                @foreach ($workers as $worker )
+                     <option value="{{$worker->id}}"> {{$worker->name}}</option>
                  @endforeach
             </select>
             <x-input-error for="InstallationCreate.worker_id" />

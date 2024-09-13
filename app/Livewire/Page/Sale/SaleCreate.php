@@ -16,7 +16,7 @@ class SaleCreate extends Component
     public $users;
     public function mount(){
         $this->services = Service::get();
-        $this->users = User::role('admin')->get();
+        $this->users = User::role(['worker','admin'])->get();
     }
 
     public function save(){

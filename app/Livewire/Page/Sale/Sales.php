@@ -10,8 +10,10 @@ class Sales extends Component
 
     public $sales;
     public $showModalDelete=false;
+    public $showModalTranslation=false;
     public $id;
     public $message;
+
 
     public function mount(){
         $this->sales = Sale::get();
@@ -27,7 +29,11 @@ class Sales extends Component
             $this->message = "Ocurrio un Error";
         }
     }
-
+    
+    public function sendToInstallation($id = null){
+       
+        $this->dispatch('create-installation', $id);
+    }
 
 
 

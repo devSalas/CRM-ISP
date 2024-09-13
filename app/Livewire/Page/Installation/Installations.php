@@ -36,6 +36,7 @@ class Installations extends Component
     {
         // Cargar todas las instalaciones
         $this->installations = Installation::all();
+        dd($this->installations);
     }
     
     public function filterInstallations()

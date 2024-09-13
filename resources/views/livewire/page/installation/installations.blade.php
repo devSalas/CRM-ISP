@@ -37,7 +37,7 @@
                         <td class="p-3 min-w-32">{{ $installation->service->name }}</td>
                         <td class="p-3 min-w-32">{{ $installation->installation_date }}</td>
                         <td class="p-3 min-w-32">{{ $installation->hour }}</td>
-                        <td class="p-3 min-w-32">{{ $installation->worker->user->name }}</td>
+                        <td class="p-3 min-w-32">{{ $installation->worker->name }}</td>
                         <td class="p-3 min-w-32">{{ $installation->observation }}</td>
                         <td class="p-3 min-w-32" >{{ $installation->code }}</td>
                         <td class="sticky min-w-16 bg-white text-start inset-0">
